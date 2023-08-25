@@ -17,6 +17,9 @@ jobs:
 
     steps:
       - checkout
+      - setup_remote_docker:
+          docker_layer_caching: false
+          version: 20.10.17
 
       - run:
           name: Build the stack
