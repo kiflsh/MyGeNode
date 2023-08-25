@@ -20,7 +20,7 @@ jobs:
 
       - run:
           name: Build the stack
-          command: docker compose --env-file .env_test -f docker compose-test.yml build --no-cache
+          command: docker compose --env-file .env_test -f docker compose-test.yml build
           working_directory: ./
 
       - run:
