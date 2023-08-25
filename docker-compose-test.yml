@@ -23,6 +23,7 @@ services:
   # Our custom django application. It includes Geonode.
   django:
     << : *default-common-django
+    image: geonode/geonode:test
     build:
       context: ./
       dockerfile: Dockerfile
@@ -41,6 +42,7 @@ services:
   # Celery worker that executes celery tasks created by Django.
   celery:
     << : *default-common-django
+    image: geonode/geonode:test
     container_name: celery4${COMPOSE_PROJECT_NAME}
     depends_on:
       django:

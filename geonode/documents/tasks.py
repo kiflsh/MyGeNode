@@ -20,7 +20,7 @@ import os
 import io
 
 from PIL import Image
-import fitz
+import fitz_new as fitz
 
 from celery.utils.log import get_task_logger
 
